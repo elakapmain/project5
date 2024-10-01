@@ -1,4 +1,4 @@
-import router from "../router";
+import router from "../router"
 
 import { firebaseApp } from './useFirebase'
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
