@@ -30,8 +30,9 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="border border-gray-600 rounded-xl shadow bg-stone-200 h-full">
-        <img :src="faker.image.urlLoremFlickr({ width: 640, height: 240, category: 'logo'})" class="rounded-t-xl">
+    <RouterLink :to="{ name: 'JobDetails', params: {id: jobName }}">
+        <div class="border border-gray-600 rounded-xl shadow-xl bg-stone-200 h-full">
+        <img :src="faker.image.urlLoremFlickr({ width: 640, height: 240, category: 'job'})" class="rounded-t-xl">
         <div class="p-4">
             <p class="mb-2 text-2xl font-bold">{{ jobName }}</p>
             <p class="mb-3 font-normal">{{ companyName }}</p>
@@ -44,4 +45,5 @@ onMounted(() => {
             </ul>
         </div>
     </div>
+    </RouterLink>
 </template>
