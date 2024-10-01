@@ -3,6 +3,8 @@
   const { isAuthenticated, logout, user } = useAuth()
 </script>
 
+<!-- TODO: FIX THIS NAVBAR -->
+
 <template>
   <nav class="backdrop-blur-lg sticky top-0 w-auto space-x-4
   flex items-center h-20 bg-slate-600 bg-opacity-75 text-lg">

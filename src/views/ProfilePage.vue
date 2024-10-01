@@ -1,5 +1,14 @@
+<script setup>
+import { faker } from '@faker-js/faker';
+
+import { useAuth } from '../composables/useAuth';
+const { isAuthenticated, logout, user } = useAuth()
+</script>
+
 <template>
-    <main class="flex min-h-screen items-center justify-center">
-    <h1 class="text-6xl font-thin text-slate-800">Your Profile Page</h1>
-  </main>
+    <main class="grid place-items-center gap-10 p-10">
+        <img class="rounded-xl w-36" :src="faker.image.avatar()"/>
+        <h1 class="text-4xl font-thin text-slate-800">Your Profile Page</h1>
+        <h3>{{ user.email }}</h3>
+    </main>
 </template>
